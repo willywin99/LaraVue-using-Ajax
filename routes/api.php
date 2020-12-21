@@ -18,3 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('crud', 'CrudController@index');
+Route::post('crud', 'CrudController@store');
+Route::post('crud/edit/{id}', 'CrudController@edit');
+Route::post('crud/delete/{id}', 'CrudController@delete');
